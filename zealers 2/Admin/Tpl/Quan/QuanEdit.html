@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+    <style type="text/css" rel="stylesheet">
+        html,body{width:100%;height:100%;margin:0;padding:0;font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+        .header{height:40px;width:100%;background-color:#242424;position:fixed;}
+        .header_title{line-height:40px;margin-left:60px;color:#fff;font-size:15px;}
+        .header_user{font-size:12px;margin-left:20px;color:#ccc;}
+        .addinfo{width:550px;height:250px;padding-top:100px;margin-left:auto;margin-right:auto;font-size:13px;}
+        .addinfo input{width:450px;height:28px;margin-bottom:10px;outline:none;padding-left:5px;}
+        .addinfo span{display:inline-block;width: 50px;}
+        .addinfo_btn{width:450px;height:35px;text-align:center;line-height:35px;border:1px solid #ccc;margin-left:50px;margin-top:20px;border-radius:5px;}
+        .addinfo_btn:hover{background-color:#36A0FB;color:#fff;border:1px solid #36A0FB;}
+        table{width:1000px;margin-left:auto;margin-right:auto;margin-top:300px;font-size:13px;border-collapse:collapse;border-spacing:0;margin-bottom:50px;table-layout:fixed;}
+        table td{border:1px solid #ddd;padding:0;width:20%;white-space:nowrap;overflow:hidden;word-break:break-all;font-size:12px;font-weight:300;text-overflow: ellipsis;}
+        table tr:hover{background-color:#36A0FB;color:#fff !important;}
+        a{color:#fff;text-decoration:none;}
+    </style>
+    
+</head>
+<body ng-app="myapp" ng-controller="mycontroller" >
+     <div class="header">
+        <div class="header_title"><a href="/">后台管理系统</a><span class="header_user">欢迎你,{$Think.session.username}</span></div>
+    </div>
+    <div class="addinfo">     
+        <form>
+      	  	<p>版本:<input type="text" ng-model="version" name="version" ></p>  
+	        <p>小图:<input type="file" id="sImage" name="sImage"></p>  
+	        <p>颜色:<input type="text" ng-model="color" name="color"></p>
+	        <p>网络:<input type="text" ng-model="network" name="network" ></p>  
+	        <p>质量:<input type="text" ng-model="quality" name="quality" ></p>  
+	        <p>价格:<input type="text" ng-model="price" name="price" ></p>  
+	        <p>大图:<input type="file" id="bImage" name="bImage" ></p>  
+	        <p>容量:<input type="text" ng-model="volumn" name="volumn" ></p>
+	        <p>父级:<input type="text" ng-model="pid" name="pid" ></p>  
+	        <p><input type="button" name="b1" value="提交" ng-click="sub()"></p>         	
+        </form>			 
+    </div>
+    <div>
+        <table width="1000">
+            <tr style="text-align:center;font-size:15px;height:30px;color:#fff;background-color:#36A0FB;border:0;">
+                <td style="width:55px">编号</td>
+                <td style="width:100px;">ID</td>
+                <td>版本型号</td>
+                <td>小图</td>
+                <td>产品颜色</td>
+                <td>网络型号</td>
+                <td>产品质量</td>
+                <td>产品价格</td>
+                <td>产品大图</td>
+                <td>产品容量</td>
+                <td>父级</td>
+                <td>删除</td>
+            </tr>
+           
+            <tr ng-repeat="(k,v) in list" style="text-align:center;height:26px;color:#4C4C4C;">
+                <td width="10px;">{{k+1}}</td>
+                <td>{{v.id}}</td>
+                <td>{{v.version}}</td>
+                <td>{{v.sImage}}</td>
+                <td>{{v.color}}</td>
+                <td>{{v.quality}}</td>
+                <td>{{v.network}}</td>
+                <td>{{v.price}}</td>
+                <td>{{v.bImage}}</td>
+                <td>{{v.volumn}}</td>
+                <td>{{v.pid}}</td>
+                <td><span ng-click="del(v.id)">删除</span></td>
+            </tr>
+           
+        </table>
+    </div>
+    
+</body>
+<script>
+	var app = angular.module("myapp",[]);
+	app.controller("mycontroller",function($scope,$http){
+		//绑定数据
+		$scope.version="";
+		$scope.color="";
+		$scope.quality="";
+		$scope.network="";
+		$scope.price="";
+		$scope.volumn="";
+		$scope.pid="";
+		$http.get("__APP__/Quan/getList").success(function(data){		
+			$scope.list=data;
+		})
+		$scope.sub = function() {
+            var sImage= document.getElementById("sImage")["files"][0];
+            var bImage = document.getElementById("bImage")["files"][0];
+            var form = new FormData();
+            form.append("version", $scope.version);
+            form.append("color", $scope.color);
+            form.append("volumn", $scope.volumn);
+            form.append("quality", $scope.quality);
+            form.append("network", $scope.network);
+            form.append("price", $scope.price);
+            form.append("pid",$scope.pid);
+            form.append("sImage", sImage);
+            form.append("bImage", bImage);
+            $.ajax({
+                type: "post",
+                url: "__APP__/Quan/addData",
+                data: form,
+                processData: false,
+                contentType: false,
+                async: true,
+                success: function (data) {
+                    $scope.list = data.data;
+                }
+            })
+        }
+		$scope.del=function(id){
+//			alert('v.id')
+			$http({
+				url:"__APP__/Quan/del",
+				method:"POST",
+				data:{
+					id:id
+				},
+				headers:{
+					"Content-type":"application/x-www-form-urlencoded"
+				},				
+			}).success(function(data){
+			if(data.status==1){
+				$scope.list=data.data;
+			}else{
+				alert(data.info);
+			}
+				})
+			
+		}
+	})
+	
+</script>
+</html>

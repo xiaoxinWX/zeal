@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ZEALER S</title>
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/shopping.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/bootstrap.min.css" />
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+     <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+		<include file="Public:index_header" />	
+
+    <div class="shoppingBox">
+			<div class="shoppingWrap">
+				<div class="shoppingWrapCar">
+					<h3 class="gogoshopp">购物车<span>({$goucount})</span></h3>
+					<div class="">
+						
+					</div>
+					<ul class="shoppingWrapCarLeft">
+						<!--循环形成商品-->
+						<volist name="gouwuche" id="value">
+						<li class="shoppingWrapCarLeftL">
+							 <div class="shoppingLi">
+							 	<div class="shoppingLiLeft">
+							 		<img src="__ROOT__/{$value.sImage}" />
+							 		<div class="hoppingLiLeftP">
+							 			<p>{$value.version}</p>
+							 			<p>{$value.color}&nbsp;{$value.volumn}&nbsp;{$value.network}&nbsp;{$value.quality}&nbsp;</p>
+							 			<p>二手诚品 <a class="numberC">{$value.price}</a></p>
+							 			<p>{$value.id}</p>
+							 		</div>
+							 	</div>
+							 	<div class="shoppingLiCenter">
+							 		<input type="number" min="1" class="shoppingLiCenterInput" value="1"/>
+							 		<a href="__APP__/Shopping/del?id={$value.id}" class="shanchu">删除</a>
+							 	</div>
+							 	<div class="shoppingLiRight">
+							 		<h4 class="shoppingLiRightH">{$value.price}</h4>
+							 	</div>
+							 </div>
+						</li>
+						</volist>
+						
+					</ul>
+					<div class="shoppingWrapCarRight">
+						<h4>共<span>{$goucount}</span>件商品</h4>
+						<div class="totaiMin">
+							<div class="articleFather">
+							   <div class="article">商品价格:</div>
+							   <div class="articleSon"></div>
+							</div>
+							<div class="carriageFather">
+								<div class="carriage">运费:</div>
+								<div class="carriageSon"></div>
+							</div>
+							<div class="aggregateFather">
+								<div class="aggregate">总计:</div>
+								<div class="aggregateSon"></div>
+							</div>
+						</div>
+						<button class="someway">总算</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			<include file="Public:index_footer" />
+	
+</body>
+<script src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+<script>
+	var app = angular.module("myapp",[]);
+		
+		$('.shanchu').on('click',function(){
+		$(this).parent().parent().parent().remove();
+	})
+		$(document).ready(function(){
+			$('.articleSon').text("￥"+$(".shoppingLiRightH:eq(0)").text());
+			var zongji=0;
+			$(".shoppingLiRightH").each(function(){
+//				console.log(parseInt($(this).text()));
+				zongji+=parseInt($(this).text());
+			})
+			$('.aggregateSon').text("￥"+zongji);
+			$('.carriageSon').text("￥"+0);
+		})
+		$(".shoppingLiCenterInput").on("input",function(){
+			var value = $(this).parent().prev().find('.numberC').text();
+			var value1 = $(this).val();
+			$(this).parent().next().find('.shoppingLiRightH').text(value*value1);
+			var tx = 0;
+			if($('.shoppingWrapCarLeftL').length > 1){
+				$('.shoppingWrapCarLeftL').each(function(){
+					var tex = $(this).children('.shoppingLi').children('.shoppingLiRight').children('.shoppingLiRightH').text();
+					tx += parseInt(tex);
+				})
+				$('.aggregateSon').text("￥"+tx);
+//				$('.carriageSon').text("￥"+tx);
+			}else{
+				var value2 = $(this).parent().next().find('.shoppingLiRightH').text();
+				$('.aggregateSon').text("￥"+value2);
+//				$('.carriageSon').text("￥"+value2);
+			}		
+		})	
+		$(".someway").on("click",function(){
+			window.location.href="__APP__/Dizhi/huoqu";
+		})
+	
+</script>
+
+</html>

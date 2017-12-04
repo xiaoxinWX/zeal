@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ZEALER S</title>
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/shouhou.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />
+	    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+	    <link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/bootstrap.min.css" />
+	    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+	    <script src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body ng-app="myapp" ng-cloak>
+
+		<include file="Public:index_header" />	
+
+		 <div class="service_center">
+            <img class="service_center_image" src="__ROOT__/Index/Common/images/service6.jpg" />
+            <!--中间点击事件所有的div的父级-->
+           <div class="service_center_button">
+                <!--新手引导-->
+                <div class="service_center_novice service_center_boot">
+                    <!--绿色的图片-->
+                    <div class="service_center_novice_green"></div>
+                    <a href="__APP__/Service/service" class="service_new">
+                        <div class="service_center_new"></div>
+                        <p class="feedback" >新手引导</p>
+                    </a>
+                </div>
+                <!--服务咨询-->
+                <div class="service_center_novice service_center_avc">
+                    <div class="service_center_novice_green service_center_novice_green1"></div>
+                    <a href="__APP__/Service/zixun" class="service_new">
+                        <div class="service_center_new service_center_service"></div>
+                        <p class="feedback">服务咨询</p>
+                    </a>
+                </div>
+                <!--售后服务-->
+                <div class="service_center_novice service_center_aftermarket" style="box-sizing:border-box;border: 1px solid #0FAE6F;">
+                    <div class="service_center_novice_green service_center_novice_green2" style="opacity: 1;"></div>
+                    <a href="__APP__/Service/shouhou" class="service_new">
+                        <div class="service_center_new service_center_customer"></div>
+                        <p class="feedback" style="color: #0FAE6F;">售后服务</p>
+                    </a>
+                </div>
+                <!--帮助条款-->
+                <div class="service_center_novice service_center_terms">
+                    <div class="service_center_novice_green service_center_novice_green3"></div>
+                    <a href="__APP__/Service/help" class="service_new">
+                        <div class="service_center_new service_center_help"></div>
+                        <p class="feedback">帮助条款</p>
+                    </a>
+                </div>
+                <!--意见与建议-->
+                <div class="service_center_novice service_center_novice_advice">
+                    <div class="service_center_novice_green service_center_novice_green4"></div>
+                    <a  href="__APP__/Service/yijian" class="service_new">
+                        <div class="service_center_new service_center_advice"></div>
+                        <p class="feedback">意见与建议</p>
+                    </a>
+                </div>
+              </div>
+	               <!-- 新手引导的点击事件  -->
+                    <div class="service_center_novice_son">
+                        <div class="service_center_repair">
+                            <img class="service_center_repair_img" src="__ROOT__/Index/Common/images/service8.png" />
+                            <span>|</span>
+                            <!--   维修  -->
+                            <div class="service_center_repair_p" style="border-bottom: 2px solid rgb(15, 174, 111);">维修业务</div>
+                      </div>
+                     <div class="text_box">
+                      <div class="text5">
+			  		  <div class="text_zeal">关于二手业务保修服务</div>
+			  		  <div class="text_offer">一. 二手设备类商品质保期限说明</div>
+			  		  <div  class="text_children">质保起始日:7天内	7天内	质保期内	质保期内</div>
+			  		  <div class="text_children">问题种类:	质量问题	非质量问题	质量问题	非质量问题</div>
+			  		  <div class="text_children">用户权益:	可以选择全额退款、换货或免费维修，无需承担运费	可以选择退货，仅需承担寄回运费和平台服务费（订单实际付款金额的1.5%)	可以选择免费维修，无需承担运费	可以选择退货，仅需承担寄回运费和平台服务费（订单实际付款金额的1.5%)
+</div>
+			  		  	<div class="text_offer">注：</div>
+                        <div class="text_children">1. 平台服务费为支付交易发生后支付交易平台收取的费用， ZEALER S 本身不收取任何费用。</div>
+                        <div class="text_children">2. 设备类商品7天无理由退货：用户需保证商品（包含赠品）完好，无人为损坏或外观成色下降。</div>
+                        	<div class="text_offer">二. 配件类商品质保服务说明</div>
+                        	<div class="text_children"> ZEALER S 商城销售的配件类商品提供7天无理由退货和30天非人为故障免费换新服务。</div>
+                        	<div class="text_children">1. 配件类商品7天无理由退货：用户需确保商品外观完好，不影响二次销售，寄回运费和平台服务费由用户承担。</div>
+                        	<div class="text_children">2. 配件类商品30天非人为故障免费换新服务： ZEALER S 为用户提供配件30天的故障换新服务，用户无需承担运费。</div>
+                        	<div class="text_zeal">关于维修业务保修服务</div>
+                        	<div class="text_children">1. 登录ZEALER｜FIX账户，进入［个人中心］；</div>
+                        	<div class="text_children">2. 找到需要进行售后申请的订单，点击进入订单详情；</div>
+                        	<div class="text_children">3. 在订单详情右上方，点击［售后申请］;</div>
+                        	<div class="text_children">4. 在售后服务申请页面，勾选您需要申请售后的设备或商品；</div>
+                        	<div class="text_children">5. 选择您希望进行的售后服务方案，填写售后原因；</div>
+                        	<div class="text_children">6. 选择您的联系方式，点击［提交售后申请］；</div>
+                        	<div class="text_children">7. 提交成功后，您可以在［个人中心］－［我的售后］中查看售后订单处理进度；</div>
+                        	<div class="text_children">8.提交成功的售后订单，ZEALER｜FIX客服人员将会进行评估审核，并指导您进行后续的售后流程。</div>                      
+			  		  </div>  	
+                     </div>
+                  </div>
+            </div> 
+             <include file="Public:index_footer" />
+	</body>
+	<script>
+		var app = angular.module("myapp",[]);
+	</script>
+</html>

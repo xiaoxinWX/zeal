@@ -1,0 +1,176 @@
+.footer {
+    width: 100%;
+    height: 250px;
+    /*border-top: 1px solid black;*/
+    position: relative;
+    /*background-color: grey;*/
+    border-bottom: 1px solid #F2F2F2;
+    min-width: 1000px;
+}
+
+
+/*底部左边图*/
+
+.footer_left {
+    position: absolute;
+    top: 25%;
+    /*left:10%;*/
+}
+
+
+/*底部中间的文字*/
+
+.footer_zhong {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
+
+
+/*字*/
+
+.footer_zhong dt {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "microsoft sans serif";
+    margin-bottom: 14px;
+    margin-left: 13px;
+    color: #333333;
+}
+
+.footer_zhong dd {
+    font-size: 14px;
+    font-family: "microsoft sans serif";
+    margin: 15px;
+    line-height: 28px;
+}
+
+dd a {
+    cursor: pointer;
+    color: #515151;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer_zhong .about_list dd a {
+    text-decoration: none;
+}
+
+.about_list {
+    float: left;
+}
+
+.footer_right {
+    position: absolute;
+    right: 30%;
+    top: 33%;
+}
+
+.footer_right dd {
+    margin-bottom: 16px;
+    color: #515151;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/*右边在线服务*/
+
+.footer_right_zai {
+    display: inline-block;
+    border: 1px solid green;
+    padding: 2px 15px 2px 15px;
+    height: 34px;
+    width: 88px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    color: green;
+}
+
+.footer_right_zai:hover {
+    color: green;
+}
+
+.footer_right dd a {
+    text-decoration: none;
+}
+
+.footer_foot .inner_tech {
+    background-image: url("../images/footer_wfont.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: 0 3px;
+    height: 20px;
+    padding-left: 131px;
+}
+
+.footer_box_img {
+    float: left;
+}
+
+.footer_box_img img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.footer_maxright {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+.footer_right_sina {
+    position: absolute;
+    top: -180px;
+    left: -25px;
+    width: 164px;
+    height: 164px;
+    padding: 5px 0px 0px 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    display: none;
+}
+
+.footer_right_sina img {
+    width: 150px;
+    height: 150px;
+}
+
+.footer_right_weixin {
+    position: absolute;
+    top: -180px;
+    left: -75px;
+    width: 164px;
+    height: 164px;
+    padding: 5px 0px 0px 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    display: none;
+}
+
+.footer_right_weixin img {
+    width: 150px;
+    height: 150px;
+}
+
+.footer_foot {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 100%;
+}
+
+.footer_foot_dibu {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+}
+
+.footer_foot_dibu .footer_xiao a {
+    text-decoration: none;
+    color: #999999;
+}

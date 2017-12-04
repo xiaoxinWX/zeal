@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ZEALER S</title>
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/login.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/bootstrap.css">
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/bootstrap.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+    <style>
+        .reg {
+            margin: 0 0 20px 0;
+        }
+
+        .a_wrap {
+            margin-top: 20px;
+        }
+
+        .center_right {
+            margin-left: 40px;
+        }
+
+        .center_left {
+            margin-left: 80px;
+        }
+
+        .checkup {
+            display: inline-block;
+            color: red;
+            font-size: 14px;
+            text-indent: 2em;
+        }
+
+        .center_left .password {
+            margin-bottom: 25px;
+        }
+        .center_left .text {
+            margin-bottom: 25px;
+        }
+
+        .anniu {
+            width: 325px;
+            background-color: #000000;
+            color: white;
+            margin-bottom: 30px;
+            height: 40px;
+        }
+        .anniu:hover{
+            color:white;
+        }
+    </style>
+</head>
+
+<body ng-app="myapp" ng-controller="mycontroller" >
+	
+    <div class="login_box" name="myform" novalidate="novalidate">
+        <div class="login_top">
+            <div class="login_border"></div>
+            <div class="login_img">
+                <img src="__ROOT__/Index/Common/images/login.png" />
+            </div>
+        </div>
+        <div class="login_center">
+            <div class="center_right">
+                <img src="__ROOT__/Index/Common/images/login1.png" />
+            </div>
+            <div class="center_left">
+                <form novalidate="novalidate" name="myform">
+                    <input type="text" class="text" placeholder="手机" ng-model="users.phone" required ng-required="true" ng-minlength="11" ng-maxlength="11"
+                        name="phone" />
+                    <span class="checkup" ng-show="myform.phone.$invalid">请输入正确的手机号</span>
+                    </br>
+
+                    <input type="password" class="password" placeholder="密码" id="passward" name="pwd1" ng-model="users.pwd1" required ng-required="true"
+                        ng-minlength="6" ng-maxlength="20" pattern="(\w){6,20}" ng-pattern="/^(\w){6,20}$/" />
+                    <span class="checkup" ng-show="myform.pwd1.$invalid">密码长度6-20位</span>
+                    </br>
+
+                    <input type="password" class="password" placeholder="重复密码" id="password_confirm" name="password_confirm" required ng-required="true" ng-minlength="6" ng-maxlength="20" title="请再次输入你的密码" ng-model="users.pwd2"/>
+                     <span class="checkup" ng-show="users.pwd2!==users.pwd1">两次输入密码不一致</span>  
+                </form>
+
+                </br>
+                <button class="reg btn anniu" ng-click="newReg()" ng-disabled="myform.$invalid">注册</button>
+                <div class="">还没有账号，<a href="###">可使用以下方式登陆</a></div>
+                <div class="a_father a_wrap">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+<script>
+    var app = angular.module("myapp", []);
+    app.controller("mycontroller", function ($scope, $http) {
+        $scope.users = {
+                phone: '',
+                pwd1: '',
+                pwd2: '',
+            },
+            $scope.newReg = function () {
+                if (($scope.users.pwd1 == $scope.users.pwd2) && $scope.phone !== "") {
+                    $http({
+                        url: "__APP__/Register/checkRegister",
+                        method: "post",
+                        headers: {
+                            "Content-type": "application/x-www-form-urlencoded"
+                        },
+                        data: $scope.users
+                    }).success(function (data) {
+                        console.log(data)
+                        if (data.status == 1) {
+                            //成功让他去登陆
+	        				window.location.href = "__APP__/Login/login"
+                        } else if(data.status == 2){
+                            alert(+data.info)
+                        } else if(data.status == 3) {
+                            alert("系统出错"+data.info)
+                        }
+                    })
+                }
+            }
+    })
+</script>
+
+</html>

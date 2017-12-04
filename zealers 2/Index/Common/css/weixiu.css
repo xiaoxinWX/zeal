@@ -1,0 +1,864 @@
+* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: #F7F7F7;
+			}
+			li {
+				list-style: none;
+			}
+			/*顶部看看的*/
+			.dingbu{
+				width:100%;
+				height:100px;
+				border:1px solid red;
+			}
+			.weixiu_active{
+				/*display: none;*/
+			}
+			/*整个轮播图的*/
+			.wrap {
+				width: 1120px;
+				height: 500px;
+				position: relative;
+				margin: 10px auto;
+			}
+			
+			.wrap .imgs li {
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			
+			.wrap .imgs li img {
+				width: 1120px;
+				height: 500px;
+				vertical-align: top;
+			}
+			
+			.wrap .num {
+				position: absolute;
+				left: 0;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.wrap .num li {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: black;
+				opacity:0.7;
+				text-align: center;
+				line-height: 20px;
+				font-size: 16px;
+				margin: 0 3px;
+				cursor: pointer;
+				color: #fff;
+				display: inline-block;
+			}
+			
+			.wrap .num li.active {
+				background: white;
+			}		
+			
+			.wrap:hover .btn {
+				display: block;
+			}
+			
+			.weixiu_yin{
+				position: absolute;
+				width: 1120px;
+				top:90%;;
+				display: none;
+			}
+			.weixiu_yin_di2{
+				position: absolute;
+				width: 1120px;
+				top:90%;
+				display: none;
+			}
+			.weixiu_yin_di3{
+				position: absolute;
+				width: 1120px;
+				top:90%;
+				display: none;
+			}
+			.weixiu_yin_1{
+				position: absolute;
+				width:100%;
+				top:100%;
+				height: 100px;
+				left:2%;
+				margin-top: 30px;
+			}
+			
+			/*.des_icon{
+				    padding: 0 2%;
+				    font-size: 16px;
+				    line-height: 22px;
+				    color: #9B9B9B;
+				    position: relative;
+				    margin: 20px 0;
+			}*/
+			.weixiu_yin_1 .des_icon{
+				position: absolute;
+			    margin-right: 5px;
+			    margin-left: 20px;
+			    margin-top: 18px;
+			    width: 3px;
+			    height: 15px;
+			    background: #FC0;
+			}
+			.weixiu_yin_1 p{
+		    		/*display: block;
+		    		position:absolute;
+		    		left:3%;	
+		    		top:15%;	    		
+			    font-size: 16px;
+			    line-height: 22px;
+			    color: #9B9B9B;*/
+			   padding-left: 30px;
+			   padding-top:14px;
+			   font-size: 16px;
+			    color: #9B9B9B;
+			}
+			.weixiu_service_1 {
+				border-top:2px solid rgba(229,229,229,.49);
+				position: absolute;
+				width: 100%;
+				height: 100px;
+				margin-top: 85px;
+			}
+			.weixiu_timePlace_title{
+				font-size: 18px;
+			    color: #292929;
+			    line-height: 25px;
+			    margin-top: 17px;
+			    margin-bottom: 17px;
+			    font-weight: 400;
+			}
+			.weixiu_timePlace_item{
+				padding: 16px 15px 10px;
+			    border: 1px solid #474747;
+			    border-radius: 4px;
+			    margin-bottom: 16px;
+			    cursor: pointer;
+			}
+			.weixiu_item_name {
+				font-size: 18px;
+			    color: #474747;
+			    line-height: 24px;
+			}
+			.weixiu_item_detail{
+				font-size: 14px;
+			    color: #9B9B9B;
+			    line-height: 20px;
+   				margin-top: 4px;
+			}
+			.weixiu_index_serviceBtn {
+			    width: 96%;
+			    font-size: 16px;
+			    color: #F9F9FA;
+			    background: #D3D3D3;
+			    border-radius: 4px;
+			    margin: 0 auto;
+			    height: 50px;
+			    margin-top: 48px;
+			    cursor: pointer;
+			}
+			/*最下面的售后服务的点击事件*/
+			.weixiu_dian {
+				position:absolute;
+				top:95%;
+			}
+			.weixiu_dian_active{
+				position: absolute;
+				top:73%;
+			}
+			/*几个点击事件*/
+			.weixiu_dian dt{		
+				width: 1110px;
+				height: 30px;
+				line-height: 30px;
+				margin:10px;
+				border-top:1px solid #E5E5E5;	
+				display: block; 	 
+			}		
+			.weixiu_dian dd{
+				margin-left: 10px;
+			}
+			/*默认为none让其变换*/
+			.weixiu_3{
+				display: none;
+			}
+			.weixiu_3 a{
+				color:#ABB0BC;
+				font-size:14px;
+			}
+			/*维修的加号*/
+			.weixiu_jia {
+				position:absolute;
+				right:2%;
+				margin-top: -28px;
+				font-size: 25px;
+				color:#B2B2B2;
+			}		
+			.weixiu_di {
+				position: absolute;
+				/*left:22%;*/
+				width:1120px;
+				height:144px;
+				/*border:2px solid #0fae6f;*/
+				border-radius: 10px;
+			}
+			.weixiu_di .weixiu_sange_1 {
+				position:absolute;
+				left:2%;
+			    height: 144px;
+			    width: 30%;
+			    cursor: pointer;
+			    margin-right: 3%;
+			    box-sizing: border-box;
+			    border: 2px solid #FFF;
+			    border-radius: 8px;
+			    font-size: 18px;
+			    color: #474747;
+			    text-align: center;
+			}
+			.weixiu_sange_img_1{
+			    width: 90px;
+			    height: 90px;
+			    background-image: url("../images/download.png");
+			    background-position: 0 -4px;
+			    background-size: 183px;
+			    margin: 0 auto;
+			    margin-top: 13px;
+			}
+			.weixiu_sange_1 .weixiu_sange_span_1{
+				position: absolute;
+				bottom: 10%;
+				left:40%;
+			}
+			
+			.weixiu_di .weixiu_sange_2{
+				position:absolute;
+				left:34%;
+			    height: 144px;
+			    width: 30%;
+			    cursor: pointer;
+			    margin-right: 3%;
+			    box-sizing: border-box;
+			    border: 2px solid #FFF;
+			    border-radius: 8px;
+			    font-size: 18px;
+			    color: #474747;
+			    text-align: center;
+			}
+			.weixiu_di .weixiu_sange_2 .weixiu_sange_img_2{
+				width: 90px;
+			    height: 90px;
+			    background-image: url("../images/download.png");
+			    background-position: 0 -94px;
+			    background-size: 183px;
+			    margin: 0 auto;
+			    margin-top: 13px;
+			}
+			.weixiu_di .weixiu_sange_3{
+				position:absolute;
+				left:67%;
+			    height: 144px;
+			    width: 30%;
+			    cursor: pointer;
+			    margin-right: 3%;
+			    box-sizing: border-box;
+			    border: 2px solid white;
+			    border-radius: 8px;
+			    font-size: 18px;
+			    color: #474747;
+			    text-align: center;			
+			}
+			.weixiu_di .weixiu_sange_3 .weixiu_sange_img_3{
+				width: 90px;
+			    height: 90px;
+			    background-image: url("../images/download.png");
+			    background-position: 0 -184px;
+			    background-size: 183px;
+			    margin: 0 auto;
+			    margin-top: 13px;
+			}
+			/*第二个页面上门维修的*/	
+			.weixiu_er_processBar {
+			    padding: 16px 2%;
+			    position: fixed;
+			    top: 50px;
+			    left: 0;
+			    width: 100%;
+			    z-index: 1;
+			    /*background-color: #fff;*/
+			    box-sizing: border-box;
+			}
+			ul{
+			    	display: block;
+   				list-style-type: disc;
+			}
+			.weixiu_er_clear{
+				zoom: 1;
+			}
+			li{
+				list-style: none;
+				display: list-item;
+   				text-align: -webkit-match-parent;
+			}
+			.weixiu_er_progressBar .weixiu_er_clear li{
+				width: 14%;
+			    margin-right: .33%;
+			    float: left;
+			    height: 4px;
+			    background: black;
+			}
+			.weixiu_er_tou{
+				position: relative;
+			    width: 96%;
+			    margin: 0 auto;
+			    padding: 20px 12px 15px;
+			    color: #FFF;
+			    box-sizing: border-box;
+			    background-image: linear-gradient(-180deg,#19ab87 0,#0c8757 100%);
+			    border-radius: 4px;
+			    margin-top: 40px;
+			    display: none;
+			}
+			.weixiu_er_type{
+				font-size: 20px;
+    				line-height: 28px;
+			}
+			.weixiu_er_type a{
+				font-size: 14px;
+			    color: #f7f7f7;
+			    margin-left: 20px;
+			    opacity: .69;
+			    font-weight: 400;
+			}
+			/*头部下划线*/
+			.weixiu_er_underline{
+			    width: 20px;
+			    height: 3px;
+			    margin-top: 16px;
+			    margin-bottom: 20px;
+			    background-color: #FFF;
+			}
+			/*头部标题*/
+			.weixiu_er_title{
+			    font-size: 18px;
+			    line-height: 24px;
+			    font-weight: 400;
+			}
+			.weixiu_er_address{
+				font-weight: 400;
+			    font-size: 14px;
+			    line-height: 24px;
+			}
+			.weixiu_er_tel{
+				font-size: 14px;
+			    line-height: 20px;
+			    font-weight: 400;
+			}
+			/*除了什么问题呢，为啥不能换背景颜色*/
+			.weixiu_er_tou_imgactive{
+			    background-position: -4px -102px;
+				width: 80px;
+			    height: 80px;
+			    position: absolute;
+			    right: 9px;
+			    top: 20px;
+			    background-image: url("../images/download.png");
+			    background-size: 183px;			
+			}
+			/*第二页的头部的背景图片*/
+			.weixiu_er_tou_img{
+			    width: 80px;
+			    height: 80px;
+			    position: absolute;
+			    right: 9px;
+			    top: 20px;
+			    background-image: url("../images/download.png");
+			    background-size: 183px;
+		        background-position: -4px -12px;
+			}
+			
+			.weixiu_er_chosen{
+				/*display: none;*/
+			    padding: 2%;
+			    font-size: 18px;
+			    color: #9B9B9B;
+			}
+			.weixiu_er_chosen2{
+				display: none;
+				margin-left: 2%;
+			    font-size: 18px;
+			    color: #9B9B9B;
+			}
+			.weixiu_er_chosen2 a{
+				font-size: 16px;
+			    color: #0FAE6F;
+			    float: right;
+			    margin-right: 2%;
+			}			
+			.weixiu_er_device{
+			    /*padding: 20px 0;*/
+			    line-height: 25px;			   
+			    font-size: 18px;
+    				color: #9B9B9B;  
+    				display: none; 				 
+			}
+			.weixiu_er_juti{
+				margin-top: 15px;
+				display: none;
+				padding-bottom: 15px;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			.weixiu_er_device a{
+				/*display: none;*/
+				font-size: 16px;
+			    color: #0FAE6F;
+			    float: right;
+			}
+			a{
+			 text-decoration: none;
+   			 cursor: pointer;
+			}
+			.weixiu_er_left_title{
+				display: none;
+			    width: 100%;
+			    padding-left: 2%;
+			    margin: 15px 0;
+			    font-size: 15px;
+  				
+			}
+			.weixiu_er_left_title label{
+			    font-size: 18px;
+			    float: none;
+			    margin-right: 0;
+			    color: #575d6a;
+			}
+			.weixiu_er_mobile {
+			    width: 100%;
+    				float: none;
+    				display: none;
+			}
+			.weixiu_er_mobile ul{
+				padding: 2% 6%;			    
+			    background: #fff;
+			    box-sizing: border-box;
+			    width: 100%;
+			    padding: 5px 0 20px 10px;
+			    display: inline-block;
+			    margin-left: 3%;
+			    background: rgba(249,249,250,.6);
+			}
+			.weixiu_er_mobile ul li{
+			    font-size: 15px;
+			    float: left;
+			    width: 45%;
+			    height:136px;
+			    line-height: 136px;
+			    border-color: #474747;
+			    text-align: center;
+			    border: 1px solid #abb0bc;
+			    border-radius: 6px;
+			    margin: 15px 15px 0 0;
+			    cursor: pointer;
+			}
+			.weixiu_er_guzhang{
+				 width: 100%;
+    				float: none;
+    				display: none;
+			}
+			.weixiu_er_guzhang ul{
+				padding: 2% 6%;			    
+			    background: #fff;
+			    box-sizing: border-box;
+			    width: 100%;
+			    padding: 5px 0 20px 10px;
+			    display: inline-block;
+			    margin-left: 3%;
+			    background: rgba(249,249,250,.6);
+			}
+			.weixiu_er_guzhang ul li{
+			    font-size: 15px;
+			    float: left;
+			    width: 45%;
+			    height:136px;
+			    border-color: #474747;
+			    text-align: center;
+			    line-height: 46px;
+			    border: 1px solid #abb0bc;
+			    border-radius: 6px;
+			    margin: 15px 15px 0 0;
+			    cursor: pointer;
+			}
+			.ul_hover img{
+			    display: block;
+			    margin: 0 auto;
+			    margin-top: 8px;
+			    width: 115px;
+			    height: 98px;
+			}
+			.ul_hover p{
+				margin-top: -10px;
+			}
+			.weixiu_san_box{
+				display: none;
+			}
+			.weixiu_san_box .problem_ul .problem_li{				
+			    height: auto;
+			    min-height: 95px;
+			    margin-left: 2%;
+			    line-height: 40px;
+			    width: 95%;
+			    box-sizing: border-box;
+			    padding: 19px 20px 15px;
+			    text-align: left;
+			    margin-bottom: 4%;
+			    box-shadow: none;
+			    -webkit-box-shadow: none;
+			    -ms-box-shadow: none;
+			    -moz-box-shadow: none;
+		        position: relative;
+			}
+			.problem_li{
+			    float: left;
+			    width: 130px;
+			    text-align: center;
+			    line-height: 46px;
+			    border: 1px solid #abb0bc;
+			    border-radius: 6px;
+			    margin: 15px 15px 0 0;
+			    cursor: pointer;
+			    font-size: 15px;
+		        border-color: #474747;
+			}						
+			.weixiu_san_img{
+			    width: 22px;
+			    height: 22px;
+			    position: absolute;
+			    background-image: url("../images/haoduotu.png");
+			    background-position: 0 -359px;
+			    background-size: 183px;
+			    right: 19px;
+			    top: 20px;
+			}
+			.weixiu_san_active{
+				border-color: #0FAE6F;
+			    color: #0fae6f;
+			}
+			.weixiu_san_active_img{
+			 	width: 22px;
+			    height: 22px;
+			    position: absolute;
+			    background-image: url("../images/haoduotu.png");
+			    background-position: 0 -402px;
+			    background-size: 183px;
+			    right: 19px;
+			    top: 20px;
+			}
+			.weixiu_si_wrap{
+				padding-top: 15px;
+			    padding-bottom: 30px;
+			    padding-left: 2%;
+			    padding-right: 2%;
+			    box-sizing: border-box;
+		        background: #F7F7F7;
+			}
+			.weixiu_si_label{
+				padding: 0;
+			    margin: 0;
+			    line-height: 24px;
+			    padding-bottom: 4px;
+			    border-bottom: 1px solid #E5E5E5;
+			}
+			.weixiu_si_container{
+				padding: 14px 22px 15px;
+			    background-color: #F7F7F7;
+			    width:98%;
+			    /*border: 1px solid #EDEDED;*/
+			    box-shadow: 0 2px 4px 0 rgba(237,237,237,.7);
+			    -webkit-box-shadow: 0 2px 4px 0 rgba(237,237,237,.7);
+			    -ms-box-shadow: 0 2px 4px 0 rgba(237,237,237,.7);
+			    -moz-box-shadow: 0 2px 4px 0 rgba(237,237,237,.7);
+			    border-radius: 4px;
+			    
+			}
+			.weixiu_si_container label{
+			    font-size: 18px;
+			    margin-right: 0;	
+				color: #575d6a;
+				
+			}
+			.weixiu_si_span{
+			   margin-top: 15px;
+			   display: inline-block;
+			   font-size: 16px;
+			    color: #9B9B9B;
+			}
+			.weixiu_si_price_right{
+			    float: right;
+			    width: initial;
+			    font-size: 16px;
+			    color: #9B9B9B;
+			    margin-top: 15px;
+			    padding: 0 15px;
+			    box-sizing: border-box;
+			    text-align: left;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+		        line-height: inherit;
+			}
+			.weixiu_active{
+				/*display: block;*/
+			}
+			.weixiu_si{
+				display: none;
+			}
+			.weixiu_qi{
+				display: none;
+			}
+			.weixiu_rep_statusHistory{
+				/*display: none;*/
+			}
+			.weixiu_rep_statusHistory .sh_switch{
+			    border-bottom: 1px solid #E5E5E5;
+			    font-size: 16px;
+			    color: #9B9B9B;
+			    line-height: 22px;
+			}
+			.weixiu_rep_statusHistory .sh_switch span{
+				display: inline-block;
+			    padding-left: 16px;
+			    padding-right: 16px;
+			    padding-bottom: 5px;
+			}
+			.sh_historyContent{
+				display: none;
+			}
+			.sh_content{
+				margin-top: 24px;
+			    padding-bottom: 89px;
+			    border-bottom: 1px solid #E5E5E5;
+			}
+			
+			.sh_statusContent li {
+			        width: 30%;
+				    border: 1px solid #474747;
+				    border-radius: 4px;
+				    box-sizing: border-box;
+				    margin-right: 2%;
+				    font-size: 14px;
+				    color: #474747;
+				    float: left;
+				    text-align: center;
+				    line-height: 64px;
+			}
+			.sh_historyContent li{
+					width: 30%;
+				    border: 1px solid #474747;
+				    border-radius: 4px;
+				    box-sizing: border-box;
+				    margin-right: 2%;
+				    font-size: 14px;
+				    color: #474747;
+				    float: left;
+				    text-align: center;
+				    line-height: 64px;
+			}
+			.weixiu_qi_check{
+				color: #5C5C5C;
+    				border-bottom: 2px solid #0FAE6F;
+			}
+		
+			.weixiu_rep_form{
+				padding:0 2%;
+			}
+			
+			.weixiu_rep_falInfo a{
+				display: none;
+				float: right;
+			    font-size: 16px;
+			    line-height: 21px;
+			    color: #0FAE6F;
+			    margin-right: 6px;
+			}
+			.weixiu_text_moren{			    
+			    font-size: 14px;
+			    line-height: 20px;
+			    margin-top: 10px;
+			    padding: 0;
+			    width: 100%;
+			    height: auto;
+			    border: 0;
+			    background: #fff;
+			    color: #9B9B9B;
+			    display: none;
+			}
+			.weixiu_text_active{
+				border: 1px solid #E5E5E5;
+			    width: 95%;
+			    height: 100px;
+			    padding: 10px;
+			    display: block;
+			}
+			.weixiu_rep_falInfo{
+			    font-size: 18px;
+			    color: #9B9B9B;
+			    border-bottom: 1px solid #E5E5E5;
+			    line-height: 24px;
+			    padding-top: 24px;
+			    padding-bottom: 20px;
+			}		
+			.weixiu_contact{
+				font-size: 18px;
+			    color: #9B9B9B;
+			    border-bottom: 1px solid #E5E5E5;
+			    line-height: 24px;
+			    padding-top: 24px;
+			    padding-bottom: 20px;
+			}
+			.weixiu_contact a{
+				display: none;
+				float: right;
+			    font-size: 16px;
+			    line-height: 21px;
+			    color: #0FAE6F;
+			    margin-right: 6px;
+			}
+			.weixiu_rep_contacrBtn{
+			    width: 120px;
+			    line-height: 40px;
+			    text-align: center;
+			    font-size: 16px;
+			    color: #FFF;
+			    background: #0FAE6F;
+			    border-radius: 4px;
+			    padding: 0;
+			    margin-top: 30px;
+			    margin-bottom: 10px;
+			    display: none;
+			}
+			.weixiu_rep_contactBtn{
+				width: 120px;
+			    line-height: 40px;
+			    text-align: center;
+			    font-size: 16px;
+			    color: #FFF;
+			    background: #0FAE6F;
+			    border-radius: 4px;
+			    padding: 0;
+			    margin-top: 30px;
+			    margin-bottom: 10px;
+			    display: none;
+			}
+			.weixiu_rep_warning{
+			    font-size: 18px;
+			    color: #9B9B9B;
+			    border-bottom: 1px solid #E5E5E5;
+			    line-height: 24px;
+			    padding-top: 24px;
+			    padding-bottom: 20px;
+			}
+			.weixiu_rep_warning_span{
+			    width: 24px;
+			    height: 24px;
+			    display: inline-block;
+			    float: right;
+			    margin-right: 6px;
+			    background-image: url("../images/download.png");
+			    background-size: 183px;
+			    background-position: 0 -443px;
+			}
+			.weixiu_rep_warning_spanActive{
+			    width: 24px;
+			    height: 24px;
+			    display: inline-block;
+			    float: right;
+			    margin-right: 6px;
+			    background-image: url("../images/download.png");
+			    background-size: 183px;
+			    background-position: 0 -486px;
+			}
+			.weixiu_re_confirmBtn{
+				width: 96%;
+			    display: block;
+			    font-size: 16px;
+			    color: #F9F9FA;
+			    background: #D3D3D3;
+			    border-radius: 4px;
+			    margin: 0 auto;
+			    margin-top: 40px;
+			    height: 50px;
+			}
+			/*被选中后的样式*/
+			.weixiu_xuan_checked{
+			    color: #0FAE6F;
+   				border: 1px solid #0FAE6F;
+			}
+			.weixiu_rep_falInfo_span{
+				display: none;
+				margin-top: 15px;
+			}
+			.contact_title a{
+				display: none;
+			}
+			.weixiu_rep_warningDetail{
+				display: none;
+			}
+			.weixiu_rep_warningDetail h3{
+				font-size: 26px;
+			    color: #474747;
+			    line-height: 37px;
+			    margin-top: 14px;
+			    margin-bottom: 20px;
+			    font-weight: 400;
+			}
+			.weixiu_warningDtaile_underline{
+				width: 37px;
+			    height: 1px;
+			    background: #E2E5E7;
+			    margin-bottom: 13px;
+			}
+			.weixiu_rep_warningDetail p{
+			    font-size: 16px;
+			    color: #ADADAD;
+			    letter-spacing: .88px;
+			    line-height: 25px;
+			}
+			/*按钮被选中后的样式*/
+			.weixiu_rep_anniu{
+				background: #0FAE6F;
+			}
+			.weixiu_rep_warningyue{
+			    width: 60%;			  
+			    padding: 0;
+			    margin-top: 20px;
+			    margin-left: 18%;
+			    line-height: 50px;
+			    text-align: center;
+			    font-size: 16px;
+			    color: #F9F9FA;
+			    background: #0FAE6F;
+			    border-radius: 4px;
+			    position: fixed;
+			    border-top: 8px solid #fff;
+			    border-bottom: 8px solid #fff;
+			    bottom: 0;
+			    box-sizing: border-box;
+			    left: 2%;
+			}
+			button{
+				border: 0;
+    				outline: 0;
+			}

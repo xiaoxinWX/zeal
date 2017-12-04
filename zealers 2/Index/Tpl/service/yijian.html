@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ZEALER S</title>
+	<link rel="stylesheet" href="__ROOT__/Index/Common/css/service.css" />
+	<link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />
+	<link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/bootstrap.min.css" />
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+	<script src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+</head>
+	<body ng-app="myapp" ng-cloak>
+		<include file="Public:index_header" />	
+
+		 <div class="service_center">
+            <img class="service_center_image" src="__ROOT__/Index/Common/images/service6.jpg" />
+            <!--中间点击事件所有的div的父级-->
+            <div class="service_center_button">
+                <!--新手引导-->
+                <div class="service_center_novice service_center_boot">
+                    <!--绿色的图片-->
+                    <div class="service_center_novice_green"></div>
+                    <a href="__APP__/Service/index" class="service_new">
+                        <div class="service_center_new"></div>
+                        <p class="feedback" >新手引导</p>
+                    </a>
+                </div>
+                <!--服务咨询-->
+                <div class="service_center_novice service_center_avc" >
+                    <div class="service_center_novice_green service_center_novice_green1"></div>
+                    <a href="__APP__/Service/zixun" class="service_new">
+                        <div class="service_center_new service_center_service"></div>
+                        <p class="feedback">服务咨询</p>
+                    </a>
+                </div>
+                <!--售后服务-->
+                <div class="service_center_novice service_center_aftermarket">
+                    <div class="service_center_novice_green service_center_novice_green2"></div>
+                    <a href="__APP__/Service/shouhou" class="service_new">
+                        <div class="service_center_new service_center_customer"></div>
+                        <p class="feedback">售后服务</p>
+                    </a>
+                </div>
+                <!--帮助条款-->
+                <div class="service_center_novice service_center_terms">
+                    <div class="service_center_novice_green service_center_novice_green3"></div>
+                    <a href="__APP__/Service/help" class="service_new">
+                        <div class="service_center_new service_center_help"></div>
+                        <p class="feedback">帮助条款</p>
+                    </a>
+                </div>
+                <!--意见与建议-->
+                <div class="service_center_novice service_center_novice_advice" style="box-sizing:border-box;border: 1px solid #0FAE6F;">
+                    <div class="service_center_novice_green service_center_novice_green4" style="opacity: 1;"></div>
+                    <a href="__APP__/Service/yijian" class="service_new">
+                        <div class="service_center_new service_center_advice"></div>
+                        <p class="feedback" style="color: #0FAE6F;">意见与建议</p>
+                    </a>
+                </div>
+              </div>
+                 <!-- 新手引导的点击事件  -->
+                   <div class="text_box">
+		               <div class="service_center_novice_line service_center_novice_line1">
+			  			<!--大的box包装两个小的div-->
+			  			<div class="service_center_novice_father">
+			  				<!--第一个son-->
+			  				<div class="service_center_novice_father_son">
+			  					<img class="service_center_novice_father_son_img" src="__ROOT__/Index/Common/images/service3.png" />
+			  					<p>在线客服</p>
+			  					<p>服务时间：9:30 － 17:30</p>
+			  					<a class="service_center_novice_father_son_now">立即咨询</a>
+			  					<p class="service_center_novice_father_son_benefit">为保证服务质量以及您的切身利益</p>
+			  					<p class="service_center_novice_father_son_preserve"> ZEALER｜FIX 将会对服务内容进行记录保存</p>
+			  				</div>
+			  				<!--第二个son-->
+			  				<div class="service_center_novice_father_son">
+			  					<img class="service_center_novice_father_son_imgs" src="__ROOT__/Index/Common/images/service.png" />
+			  					<p>在线客服</p>
+			  					<p>服务时间：9:30 － 17:30</p>
+			  					<div class="service_center_novice_father_son_ivr">语音热线：<span>400-900-707</span></div>
+			  					<p>为保证服务质量以及您的切身利益</p>
+			  					<p> ZEALER｜FIX 将会对服务内容进行记录保存</p>
+			  				</div>
+			  			</div>
+			  		</div>
+                      </div>
+                  </div>
+            </div> 
+             <include file="Public:index_footer" />
+</body>
+	<script>
+		var app = angular.module("myapp",[]);
+	</script>
+</html>

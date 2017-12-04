@@ -1,0 +1,354 @@
+*{
+	padding: 0px;
+	margin:0px;
+}
+.service_center{
+	background: #f5f5f5;
+	width: 100%;
+}
+.service_center_image{
+	width: 1120px;
+	height: 320px;
+	margin: 0px auto;
+	display:block;
+	margin-bottom: 30px;
+}
+.service_center_button{
+	width: 1120px;
+	height: 130px;
+	margin:0px auto;
+	background: white;
+}
+.service_center_novice{
+	 float: left; 
+	 width: 20%;
+	
+}
+.service_center_novice:hover{
+	 box-sizing:border-box;
+	border:1px solid #f5f5f5;
+}
+.service_new{
+	text-decoration: none;
+	display: inline-block;
+	height: 98px;
+	padding: 20px 0 10px 0;
+}
+.service_center_new{
+	width: 49px;
+	height:56px;
+	background-image: url("../images/service5.png");
+	background-position: -8px -10px;
+	margin: 0 87px 0 87px;
+	
+}
+.service_center_novice p{
+	height: 16px;
+	line-height: 16px;
+	padding: 20px 0 0;
+	color: #575D6A;
+	text-align: center;
+	font-size: 16px;
+}
+.service_center_service{
+	width: 58px;
+	height:53px;
+	background-image: url("../images/service5.png");
+	background-position: -71px -12px;	
+}
+.service_center_customer{
+	width: 59px;
+	height: 59px;
+	background-image: url("../images/service5.png");
+	background-position: -146px -6px;	
+}
+.service_center_help{
+	width: 52px;
+	height: 60px;
+	background-image: url("../images/service5.png");
+	background-position: -218px -5px;
+}
+.service_center_advice{
+	width: 76px;
+	height: 64px;
+	background-image: url("../images/service5.png");
+	background-position: -285px -2px;
+	margin: 0 73px 0 73px;
+}
+.service_center_boot{
+	position: relative;
+}
+.service_center_novice_green{
+	width: 49px;
+	height:56px;
+	background-image: url("../images/service5.png");
+	background-position: -8px -95px;
+	margin: 0 87px 0 87px;
+	position:absolute;
+	left:0px;
+	top: 20px;
+	opacity: 0;
+}
+/*<!-- 新手引导的点击事件  -->*/
+.service_center_novice_son{
+	width: 1020px;
+	background: white;
+	padding: 50px;
+	margin: 30px auto;
+}
+.service_center_repair{
+	width: 1000px;
+	height: 34px;
+	border-bottom: 1px solid #e2e5e7;
+	padding: 5px 0 0 20px;
+	
+}
+.service_center_repair_img{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 30px;
+}
+.service_center_repair_p{
+	float: left;
+	width: 66px;
+	height: 14px;
+	font-size: 14px;
+	padding: 0 5px 20px 5px;
+	margin-right: 20px;
+}
+.service_center_repair span{
+	float: left;
+	color: #e2e5e7;
+	font-size: 22px;
+	margin-top: -6px;
+	margin-right: 20px;
+}
+.text{
+	font-size: 13px;
+	padding: 30px 45px 30px 45px;
+	width: 930px;
+	display: none;
+	
+}
+.text_zeal{
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+.text_offer{
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.text_children{
+	margin-bottom: 30px;
+}
+.text1{
+	font-size: 13px;
+	padding: 30px 45px 30px 45px;
+	width: 930px;
+	display: block;
+	
+	
+}
+.text2{
+  font-size: 13px;
+ padding: 30px 45px 30px 45px;
+ width: 930px;	
+ display: none;
+}
+.text3{
+  font-size: 13px;
+ padding: 30px 45px 30px 45px;
+ position: absolute;
+ left: -425px;
+ top: 35px;
+ width: 930px;	
+ display: none;
+}
+.service_center_avc{
+	position: relative;
+}
+.service_center_novice_green1{
+	width: 58px;
+	height:53px;
+	background-image: url("../images/service5.png");
+	background-position: -71px -97px;
+	position: absolute;
+	top: 20px;
+	/*opacity: 1;*/
+}
+.service_center_novice_line{
+	width: 1020px;
+	height: 357px;
+	padding: 50px;
+	margin: 30px auto;
+	background: white;
+}
+.service_center_novice_father{
+	width: 760px;
+	height: 357px;
+	margin: 0 auto;
+}
+.service_center_novice_father_son{
+	width:335px;
+	height: 255px;
+	border:1px solid #e2e5e7;
+	margin: 20px;
+	padding: 40px 0 20px 0;
+	float: left;
+	text-align: center;
+}
+.service_center_novice_father_son_img{
+	width: 66px;
+	height: 54px;
+	margin: 0px 135px;
+}
+.service_center_novice_father_son p:nth-child(2){
+	font-size: 22px;
+	padding: 18px 0 8px 0;
+	color: #575D6A;
+}
+.service_center_novice_father_son p:nth-child(3){
+	font-size: 14px;
+	padding: 0px;
+	color: #333333;
+}
+.service_center_novice_father_son a:nth-child(4){
+	width: 56px;
+	height: 23px;
+	border:1px solid #0FAE6F;
+	font-size: 14px;
+	padding: 6px 30px;
+	margin: 16px 0 35px 0;
+	border-radius: 4px;
+	color: #0FAE6F;
+	display: inline-block;
+}
+.service_center_novice_father_son p:nth-child(5){
+	font-size: 13px;
+	padding: 0;
+	color: #abb0bc;
+}
+.service_center_novice_father_son p:nth-child(6){
+	margin-top: 13px;
+	font-size: 13px;
+	padding: 0;
+	color: #abb0bc;
+}
+.service_center_novice_father_son_imgs{
+	width: 54px;
+	height: 54px;
+	margin: 0px 135px;
+}
+.service_center_novice_father_son_ivr{
+	font-size: 14px;
+	height: 30px;
+	padding: 15px 0 42px 0;
+	color: #333333;
+}
+.service_center_novice_father_son_ivr span{
+	font-size: 18px;
+	font-weight: bold;
+    color: #0FAE6F;
+}
+.service_center_aftermarket{
+	position: relative;
+}
+.service_center_novice_green2{
+	width: 59px;
+	height: 59px;
+	background-image: url("../images/service5.png");
+	background-position: -146px -91px;	
+	/*opacity: 1;*/
+}
+.service_center_terms{
+	position: relative;
+}
+.service_center_novice_green3{
+	width: 52px;
+	height: 60px;
+	background-image: url("../images/service5.png");
+	background-position: -218px -90px;
+	/*opacity: 1;*/
+}
+.service_center_novice_son2{
+	position: absolute;
+	left: -670px;
+	top: 150px;
+	display: none;
+}
+.service_center_novice_advice{
+	position: relative;
+}
+.service_center_novice_green4{
+	position: absolute;
+	width: 76px;
+	height: 64px;
+	background-image: url("../images/service5.png");
+	background-position: -277px -86px;
+	margin: 0 73px 0 73px;
+	/*opacity: 1;*/
+}
+.service_center_novice_line1{	
+	display: block;	
+}
+.after-sales{
+	float: left;
+	width: 56px;
+	height: 14px;
+	font-size: 14px;
+	padding: 0 5px 20px 5px;
+	margin-right: 20px;
+	position: relative;
+}
+.text5{
+    font-size: 13px;
+	padding: 30px 45px 30px 45px;
+	width: 930px;	
+}
+.service_center_repair_p_maintenance{
+	float: left;
+	width: 56px;
+	height: 14px;
+	font-size: 14px;
+	padding: 0 5px 20px 5px;
+	margin-right: 20px;
+}
+.thank{
+	position: relative;
+}
+.text6{
+	font-size: 13px;
+	padding: 30px 45px 30px 45px;
+	position: absolute;
+	left: -94px;
+	top: 35px;
+	width: 930px;
+}
+.second-hand{
+   position: relative;	
+}
+.text7{
+	font-size: 13px;
+	padding: 30px 45px 30px 45px;
+	position: absolute;
+	left: -205px;
+	top: 35px;
+	width: 930px;
+	display: none;
+}
+.recycling-business{
+	 position: relative;
+}
+.text8{
+	font-size: 13px;
+ padding: 30px 45px 30px 45px;
+ position: absolute;
+ left: -315px;
+ top: 35px;
+ width: 930px;	
+ display: none;
+}

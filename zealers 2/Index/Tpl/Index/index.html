@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ZEALER S</title>
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index-middle.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/bootstrap.min.css" />
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp"ng-cloak>
+<div  class="index_header_box">
+	<include file="Public:index_header" />
+</div>
+        
+    <div class="section_wrap">
+        <div class="section_one">
+            <div class="common_head">
+                <span>STORE</span> &nbsp;&nbsp;｜&nbsp;&nbsp;享用商城
+            </div>
+            <div class="row">
+                <div>
+                    <a href="__APP__/Rephone/index">
+                        <img class="show_img" src="__ROOT__/Index/Common/images/573127bcb2b42d3189fa248d94.jpg" alt="">
+                        <img class="hide_img" src="__ROOT__/Index/Common/images/702167e6410d2d45d0af2c9a2a.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="__APP__/Accessories/index">
+                        <img class="show_img" src="__ROOT__/Index/Common/images/9511300e1d7a52bf3289807fb7.jpg" alt="">
+                        <img class="hide_img" src="__ROOT__/Index/Common/images/c9a120cec97f6b2411ad90f2b8.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="__APP__/Diy/index">
+                        <img class="show_img" src="__ROOT__/Index/Common/images/a1aae821639dc6bb243dcc0e95.jpg" alt="">
+                        <img class="hide_img" src="__ROOT__/Index/Common/images/b8a91d86c4190c2acec07c339e.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="__APP__/New/index">
+                        <img class="show_img" src="__ROOT__/Index/Common/images/27b5fc4a7ad77c20fed53ff5f0.jpg" alt="">
+                        <img class="hide_img" src="__ROOT__/Index/Common/images/b30e59e88e830ad7fa32a01eec.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="section_two">
+            <div class="common_head">
+                <span>SERVICE</span> &nbsp;&nbsp;｜&nbsp;&nbsp;手机服务
+            </div>
+            <div class="row">
+                <div>
+                    <a href="__APP__/Weixiu/index" class="mobile_repair">
+                        <img src="__ROOT__/Index/Common/images/e1356c93932c702d218830dd79.jpg" alt="">
+                        <span>手机维修</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="__APP__/Service/index" class="customer_service">
+                        <img src="__ROOT__/Index/Common/images/95f552a818f2c1829fa3a9c731.jpg" alt="">
+                        <span>客户服务</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;" class="mobile_lease">
+                        <img src="__ROOT__/Index/Common/images/8eea26e9aa5beb2cb2f0eeae5b.jpg" alt="">
+                        <span>手机租赁「敬请期待」</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="section_three">
+            <div class="common_head">
+                <span>MEDIA</span> &nbsp;&nbsp;｜&nbsp;&nbsp;科技媒体
+            </div>
+            <div class="row">
+                <div>
+                    <a href="http://www.zealer.com/post/1444">
+                        <img src="__ROOT__/Index/Common/images/c1c588d74c78ef06cfed1df85d.jpg" alt="">
+                        <span class="play_video">-&nbsp;&nbsp;播放&nbsp;&nbsp;-</span>
+                    <p>
+德国模块化机箱装机体验<img src="__ROOT__/Index/Common/images/img_c95d75fb_media_icon_viedo_default@2x.png" alt=""></p>
+<span>#DIY</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="http://www.zealer.com/post/1319">
+                        <img src="__ROOT__/Index/Common/images/9fb344d56bab5ba40921fb5e4f.jpg" alt="">
+                        <span class="play_video">-&nbsp;&nbsp;播放&nbsp;&nbsp;-</span>
+                        <p>全球首拆One Plus 5<img src="__ROOT__/Index/Common/images/img_c95d75fb_media_icon_viedo_default@2x.png" alt=""></p>
+<span>#拆解</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="http://www.zealer.com/post/1142">
+                        <img src="__ROOT__/Index/Common/images/e1d1ba470dba2e7cc49ebcf164.jpg" alt="">
+                        <span class="play_video">-&nbsp;&nbsp;播放&nbsp;&nbsp;-</span>
+                        <p>拆解坚果 Pro<img src="__ROOT__/Index/Common/images/img_c95d75fb_media_icon_viedo_default@2x.png" alt=""></p>
+<span>#拆解</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:index_footer" />
+</body>
+<script type="text/javascript">
+	var app = angular.module("myapp",[])
+   
+    //头部的js操作
+    $(window).scroll(function () {
+        if ($('body').scrollTop() > 0) {
+            $('.index_header_top_box').css({
+                "position": "fixed",
+                "left": "0",
+                "top": "0",
+                "z-index": "10",
+                "backgroundColor": "white"
+            })
+        } else {
+            $('.index_header_top_box').css({
+                "backgroundColor": ""
+            })
+        }
+    })
+    //中间
+    $('.section_one a').hover(
+        function () {
+            $('.show_img', this).hide();
+            $('.hide_img', this).show();
+        },
+        function () {
+            $('.hide_img', this).hide();
+            $('.show_img', this).show();
+        }
+    )
+    $('.customer_service').hover(
+        function () {
+            $(this).css({
+                "color": "#FFFFFF",
+                "background": "#F6B23D"
+            });
+        },
+        function () {
+            $(this).css({
+                "color": "#606060",
+                "background": "#FFFFFF"
+            });
+        }
+    )
+    $('.mobile_repair').hover(
+        function () {
+            $(this).css({
+                "color": "#FFFFFF",
+                "background": "#64C13D"
+            });
+        },
+        function () {
+            $(this).css({
+                "color": "#606060",
+                "background": "#FFFFFF"
+            });
+        }
+    )
+    $('.mobile_lease').hover(
+        function () {
+            $(this).css({
+                "color": "#FFFFFF",
+                "background": "#EE424E"
+            });
+        },
+        function () {
+            $(this).css({
+                "color": "#606060",
+                "background": "#FFFFFF"
+            });
+        }
+    )
+    //中间结束
+    //下面开始
+    $(".footer_right_a").mouseenter(function () {
+        $(".footer_right_sina").css("display", "block");
+        $(".footer_right_a img").attr("src", "../images/footer_xin2.png");
+    })
+    $(".footer_right_a").mouseleave(function () {
+        $(".footer_right_sina").fadeOut("200");
+        $(".footer_right_a img").attr("src", "../images/footer_xin1.png");
+    })
+    $(".footer_right_b").mouseenter(function () {
+        $(".footer_right_weixin").css("display", "block");
+        $(".footer_right_b img").attr("src", "../images/footer_wei2.png");
+    })
+    $(".footer_right_b").mouseleave(function () {
+        $(".footer_right_weixin").fadeOut("200");
+        $(".footer_right_b img").attr("src", "../images/footer_wei1.png");
+    })
+</script>
+
+</html>

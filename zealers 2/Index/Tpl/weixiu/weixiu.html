@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZEALER S</title>
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/weixiu.css" />
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+   
+</head>
+
+<body ng-app="myapp" ng-cloak >
+		<include file="Public:index_header" />	    
+    <div class="weixiu_active">
+        <!--轮播图-->
+        <div class="wrap">
+            <!--大图-->
+            <ul class="imgs">
+                <li>
+                    <a href="#"><img src="__ROOT__/Index/Common/images/weixiu_1.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="__ROOT__/Index/Common/images/weixiu_2.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="__ROOT__/Index/Common/images/weixiu_3.jpg" alt="" /></a>
+                </li>
+            </ul>
+            <!--轮播图下的小点点-->
+            <ul class="num">
+                <!--<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>-->
+            </ul>
+        </div>
+        <!--下面3个div和图标-->
+        <div class="container">
+            <!--上门维修-->
+            <div class="weixiu_di">
+                <div class="weixiu_sange weixiu_sange_1">
+                    <div class="weixiu_sange_img_1"></div>
+                    <span>上门维修</span>
+                </div>
+                <div class="weixiu_sange weixiu_sange_2">
+                    <div class="weixiu_sange_img_2"></div>
+                    <span>寄送维修</span>
+                </div>
+                <div class="weixiu_sange weixiu_sange_3">
+                    <div class="weixiu_sange_img_3"></div>
+                    <span>到店维修</span>
+                </div>
+            </div>
+            <!--隐藏的点击的第一个页面-->
+            <div class="weixiu_yin">
+                <div class="weixiu_yin_1">
+                    <i class="des_icon"></i>
+                    <p>工程师亲自上门进行维修服务</p>
+                </div>
+                <div class="weixiu_service_1">
+                    <h3 class="weixiu_timePlace_title">选择服务地点:</h3>
+                    <ul>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">鄂州市</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">目前支持鄂城区</p>
+                        </li>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">金华市</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">目前支持浦江县城区</p>
+                        </li>
+                    </ul>
+                    <button class="weixiu_index_1 weixiu_index_serviceBtn">确认维修</button>
+                </div>
+            </div>
+            <!--到店维修-->
+            <div class="weixiu_yin_di3">
+                <div class="weixiu_yin_1">
+                    <i class="des_icon"></i>
+                    <p>用户到指定门店进行维修</p>
+                </div>
+                <div class="weixiu_service_1">
+                    <h3 class="weixiu_timePlace_title">请选择门店:</h3>
+                    <ul>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">鄂州服务中心</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">湖北省鄂州市鄂城区凤凰路74-18号（鄂州大学斜对面）</p>
+                            <p class="weixiu_timePlace_item_2 weixiu_item_detail">0711-3877665</p>
+                        </li>
+
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">浦江服务中心</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">浙江省金华市浦江县文宣西路38-1号</p>
+                            <p class="weixiu_timePlace_item_2 weixiu_item_detail">0579-84125163</p>
+                        </li>
+                    </ul>
+                    <button class="weixiu_index_2 weixiu_index_serviceBtn">确认维修</button>
+                </div>
+            </div>
+            <!--寄送维修-->
+            <div class="weixiu_yin_di2">
+                <div class="weixiu_yin_1">
+                    <i class="des_icon"></i>
+                    <p>用户将设备寄送至 ZEALER | FIX 进行维修，维修完成后寄回设备</p>
+                </div>
+                <div class="weixiu_service_1">
+                    <h3 class="weixiu_timePlace_title">请选择门店:</h3>
+                    <ul>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">深圳服务中心</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">深圳市福田区侨香路3081号盛世大厦605号</p>
+                            <p class="weixiu_timePlace_item_2 weixiu_item_detail">0755-36901860</p>
+                        </li>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">鄂州服务中心</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">湖北省鄂州市鄂城区凤凰路74-18号（鄂州大学斜对面）</p>
+                            <p class="weixiu_timePlace_item_2 weixiu_item_detail">0711-3877665</p>
+                        </li>
+                        <li class="weixiu_timePlace_item">
+                            <span class="weixiu_item_name">浦江服务中心</span>
+                            <p class="weixiu_timePlace_item_1 weixiu_item_detail">浙江省金华市浦江县文宣西路38-1号</p>
+                            <p class="weixiu_timePlace_item_2 weixiu_item_detail">0579-84125163</p>
+                        </li>
+                    </ul>
+                    <button class="weixiu_index_3 weixiu_index_serviceBtn">确认维修</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <!--3个轮点事件-->
+        <div class="weixiu_dian">
+            <dl>
+                <dt>维修流程
+                    <div class="weixiu_jia"><span>+</span></div>
+                </dt>
+                <div class="weixiu_3">
+                    <dd><a href="">上门服务</a></dd>
+                    <dd><a href="">寄送维修</a></dd>
+                    <dd><a href="">到店维修</a></dd>
+                </div>
+
+            </dl>
+            <dl>
+                <dt>服务保障
+                    <div class="weixiu_jia"><span>+</span></div>
+                </dt>
+                <div class="weixiu_3">
+                    <dd><a href="">服务条款</a></dd>
+                    <dd><a href="">售后条款</a></dd>
+                    <dd><a href="">售后流程</a></dd>
+                </div>
+
+            </dl>
+            <dl>
+                <dt>常见问题
+                    <div class="weixiu_jia"><span>+</span></div>
+                </dt>
+                <div class="weixiu_3">
+                    <dd><a href="" 上门服务></a></dd>
+                    <dd><a href="">寄送维修</a></dd>
+                    <dd><a href="">到店维修</a></dd>
+                </div>
+
+            </dl>
+        </div>
+    </div>
+
+    <!--确认维修后的页面-->
+    <div class="weixiu_er_jixing">
+        <div class="container">
+            <!--顶部下面的bar-->
+            <div class="weixiu_er_processBar">
+                <ul class="weixiu_er_clear">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--头部的需要各种变换-->
+            <div class="weixiu_er_tou">
+                <!--上门维修的字-->
+                <div class="weixiu_er_type">
+                    <span>上门维修</span>
+                    <a href="javascript:void(0)">修改</a>
+                </div>
+                <!--下滑杠-->
+                <div class="weixiu_er_underline"></div>
+                <div class="weixiu_er_detail">
+                    <p class="weixiu_er_title">鄂州市</p>
+                    <p class="weixiu_er_address">目前支持鄂城区</p>
+                    <p class="weixiu_er_tel"></p>
+                </div>
+                <!--头部的右边的背景图片-->
+                <div class="weixiu_er_tou_img"></div>
+            </div>
+            <!--维修的具体细节-->
+            <div class="weixiu_er_chosen">
+                <!--一开始隐藏-->
+                <div class="weixiu_er_device">
+                    <span>iPhone 7 Plus</span>
+                    <a class="weixiu_er_de1" href="javascript:void(0)">修改</a>
+                    <div class="weixiu_er_juti">
+                        <span>正常运行</span>
+                        <span>有非主板维修</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="weixiu_er_chosen2">
+                <span>屏幕故障</span>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+            <!--一开始点击前的维修机型-->
+            <div class="weixiu_er_left_title">
+                <label>选择维修的机型：</label>
+            </div>
+            <!--一开始选择手机的页面-->
+            <div class="weixiu_er_mobile">
+                <ul class="ul_hover">
+                    <li>iPhone 7 Plus</li>
+                    <li>iPhone 7</li>
+                    <li>iPhone 6s Plus</li>
+                    <li>iPhone 6s</li>
+                    <li>iPhone 6 Plus</li>
+                    <li>iPhone 6</li>
+                    <li>iPhone 5s</li>
+                    <li>iPhone 5c</li>
+                    <li>iPhone 5</li>
+                </ul>
+            </div>
+            <div class="weixiu_er_guzhang">
+                <ul class="ul_hover">
+                    <li><img src="__ROOT__/Index/Common/images/download-4.png" alt="" />
+                        <p>屏幕故障</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-5.png" alt="" />
+                        <p>耗电异常</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-7.png" alt="" />
+                        <p>无法开机</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-2.png" alt="" />
+                        <p>进水侵液</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-3.png" alt="" />
+                        <p>外部部件故障</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-1.png" alt="" />
+                        <p>Wi-Fi信号故障</p>
+                    </li>
+                    <li><img src="__ROOT__/Index/Common/images/download-8.png" alt="" />
+                        <p>其他故障</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="weixiu_san_box">
+                <ul class="problem_ul">
+                    <li class="problem_li">
+                        <div class="weixiu_san_img"></div>
+                        <span class="problem_li_span_1">手机发热</span>
+                        <div class="description">
+                            <span class="problem_li_span_2">正常使用下手机发热严重</span>
+                        </div>
+                    </li>
+                    <li class="problem_li">
+                        <div class="weixiu_san_img"></div>
+                        <span class="problem_li_span_1">耗电太快</span>
+                        <div class="description">
+                            <span class="problem_li_span_2">正常使用下耗电太快</span>
+                        </div>
+                    </li>
+                    <li class="problem_li">
+                        <div class="weixiu_san_img"></div>
+                        <span class="problem_li_span_1">电量跳跃</span>
+                        <div class="description">
+                            <span class="problem_li_span_2">如电量在70%直接掉到30%</span>
+                        </div>
+                    </li>
+                    <li class="problem_li">
+                        <div class="weixiu_san_img"></div>
+                        <span class="problem_li_span_1">低电量直接关机</span>
+                        <div class="description">
+                            <span class="problem_li_span_2">电量在40%以下就直接关机显示电量不足需要充电</span>
+                        </div>
+                    </li>
+                </ul>
+                <button class="weixiu_index_serviceBtn">确认</button>
+            </div>
+            <div class="weixiu_si">
+                <div class="container">
+                    <!--第四个页面的全部内容-->
+                    <div class="weixiu_si_wrap">
+                        <!--盒子-->
+                        <div class="weixiu_si_container">
+                            <div class="weixiu_si_label">
+                                <label for="">相关维修方案</label>
+                            </div>
+                            <div class="weixiu_si_method">
+                                <ul>
+                                    <li>
+                                        <span class="weixiu_si_span">更换屏幕总成</span>
+                                        <span class="weixiu_si_price_right">￥1399.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="weixiu_index_serviceBtn weixiu_index_serviceBtn_1">今日维修名额已满(每天 9:00 开放)</button>
+                    </div>
+                </div>
+            </div>
+            <!--登录后的最后一个界面-->
+            <div class="weixiu_qi">
+                <div class="container">
+                    <!--状态和历史的切换-->
+                    <!--最外层-->
+                    <div class="weixiu_rep_statusHistory">
+                        <div class="sh_switch">
+                            <span class="weixiu_qi_span1 weixiu_qi_check">状态</span>
+                            <span class="weixiu_qi_span2">历史</span>
+                        </div>
+                        <div class="sh_content">
+                            <ul class="sh_statusContent">
+                                <li>正常运行</li>
+                                <li>无法开机</li>
+                                <li>无法进入系统</li>
+                            </ul>
+                            <ul class="sh_historyContent">
+                                <li>无维修历史</li>
+                                <li>有非主板维修</li>
+                                <li>有主板维修</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--下面3条框框-->
+                <div class="weixiu_rep_form">
+                    <!--第一个框框-->
+                    <div class="weixiu_rep_falInfo">
+                        <div>
+                            <span>屏幕故障 ( 触摸失灵 )</span>
+                            <a class="weixiu_rep_fal_a" href="javascript:void(0)">编辑</a>
+                        </div>
+                        <span class="weixiu_rep_falInfo_span">这个是要改变的内容</span>
+                        <textarea placeholder="请填写设备IMEI号并描述故障信息。" class="weixiu_text_moren"></textarea>
+                        <button class="weixiu_rep_contacrBtn">下一步</button>
+                    </div>
+                    <!--第二个框框-->
+                    <div class="weixiu_contact">
+                        <div class="contact_title">
+                            <span>联系方式</span>
+                            <span class="weixiu_contact_juti"></span>
+                            <a href="javascript:void(0)">编辑</a>
+                        </div>
+                        <button class="weixiu_rep_contactBtn">下一步</button>
+                    </div>
+                    <!--第三个框框-->
+                    <div class="weixiu_rep_warning">
+                        <span>阅读注意事项</span>
+                        <span class="weixiu_rep_warning_span"></span>
+                    </div>
+                </div>
+                <button class="weixiu_re_confirmBtn">还有3步</button>
+            </div>
+            <div class="container">
+                <div class="weixiu_rep_warningDetail">
+                    <h3>注意事项</h3>
+                    <div class="weixiu_warningDtaile_underline"></div>
+                    <p>关于维修</p>
+                    <p>1. ZEALER FIX 属于第三方维修机构，拆机检测或维修将失去苹果官方质保资格。</p>
+                    <p>2. 请自行备份资料后，清除设备数据，登出 iCloud 账户并解除相关屏幕锁屏密码，以便工程师检修您的设备。</p>
+                    <p>3. 针对由于严重磕碰、变形、进液的设备，由于较大几率存在隐性故障而导致无法开机、死机等情况，存在无法修复的可能性。对于此类故障的设备，ZEALER FIX 将提前沟通，并在用户愿意自行承担无法修复的风险后进行维修。</p>
+                    <p>关于配件</p>
+                    <p>1. 用户维修替换下的损坏配件将统一回收处理，ZEALER FIX 承诺不会将上述配件用于维修服务。</p>
+                    <p>2. 由于配件供应的不稳定性，部分配件库存较少或缺货，如有不便敬请谅解。</p>
+                    <p>* 详细信息请查阅 《 ZEALER FIX 维修业务服务条款》</p>
+                    <button class="weixiu_rep_warningyue">已阅读</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 860px;">
+    	 	<include file="Public:index_footer" />
+    </div>
+   
+</body>
+<script src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="__ROOT__/Index/Common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Index/Common/js/weixiu.js"></script>
+<script>
+	var app = angular.module("myapp",[]);
+</script>
+</html>

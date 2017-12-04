@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZEALER S</title>
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/bootstrap.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/goods_detials.css">
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_header.css" />   
+    <link rel="stylesheet" href="__ROOT__/Index/Common/css/index_footer.css" />
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/bootstrap.js"></script>
+    <script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="mycontroller" ng-cloak>
+		<include file="Public:index_header" />	
+
+    <div class="container goods_wrap">
+        <div class="row goods_banner">
+            <div class="nav_wrap">
+                <ul class="nav_list">
+                    <li><a href="__APP__/Rephone/index" class="nav_list_active">二手诚品</a></li>
+                    <li><a href="__APP__/Accessories/index">精选配件</a></li>
+                    <li><a href="__APP__/Diy/index">DIY</a></li>
+                    <li><a href="__APP__/Xin/index">全新正品</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row choose_box">
+        	<!--这个地方通过数据库获取到的方法-->
+            <div class="choose_head">{$Ersion.version}</div>
+            <div class="choose_tab_wrap">
+                <div class="choose_tab">
+                    <p>请选择参数</p>
+                    <span></span>
+                </div>
+                <div class="choose_list">
+                    <div class="choose_item_box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="thumbnail">
+                            <div class="choose_item">颜色</div>
+                            <ul class="item_droped">
+                                <li>全部颜色</li>
+                                <li>黑色</li>
+                                <li>亮黑色</li>
+                                <li>玫瑰金色</li>
+                                <li>银色</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="choose_item_box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="thumbnail">
+                            <div class="choose_item">网络</div>
+                            <ul class="item_droped">
+                                <li>全部网络</li>
+                                <li>国行全网通</li>
+                                <li>其他全网通</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="choose_item_box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="thumbnail">
+                            <div class="choose_item">容量</div>
+                            <ul class="item_droped">
+                                <li>全部容量</li>
+                                <li>32GB</li>
+                                <li>128GB</li>
+                                <li>256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="choose_item_box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="thumbnail">
+                            <div class="choose_item">品质</div>
+                            <ul class="item_droped">
+                                <li>全品质</li>
+                                <li>A级·95新</li>
+                                <li>A级·99新</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods_slide swiper-container">
+                    <div class="show_wrap_box swiper-wrapper">                  
+                     <div ng-click="dian(value)" ng-repeat="value in list" class="show_wrap swiper-slide">
+                            <!--<img src="__ROOT__/{{value.sImage}}" alt="">-->
+                            	<img ng-src="__ROOT__/{{value.sImage}}" alt="">
+                            <span>{{value.version}}</span>
+                            <span>￥{{value.price}}</span>
+                            <span>{{value.color}}</span>
+                            <span>{{value.volumn}}</span>
+                            <span>{{value.network}}</span>
+                            <span>{{value.quality}}</span>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="det_inner">
+                <span class="close_btn"></span>
+                <div class="img_box"><img src={{sImage}} alt=""></div>
+                <p class="price">{{price}}</p>
+                <p class="info_text">
+                    <span>{{color}}</span>
+                    <span>{{volumn}}</span>
+                    <span>{{network}}</span>
+                    <span>{{quality}}</span>
+                </p>
+                <button type="submit"  class="add_cart btn btn-default">
+                    <img src="__ROOT__/Index/Common/images/img_213d0d48_btn_cart_default.png" alt="">
+                    <span>加入购物车</span>
+                </button>
+            </div>
+
+
+            <div class="row ic_step">
+                <span class="ic ic_one"><img src="__ROOT__/Index/Common/images/img_213d02e8_select_progress_config.png" alt=""></span>
+                <span class="ic ic_line"></span>
+                <span class="ic ic_two"><img src="__ROOT__/Index/Common/images/img_213d0e6d_select_progress_good.png" alt=""></span>
+                <span class="ic ic_line"></span>
+                <span class="ic ic_three"><img src="__ROOT__/Index/Common/images/img_213d0d83_select_progress_cart.png" alt=""></span>
+            </div>
+        </div>
+
+        <div class="row detial_wrap">
+            <div class="detial_head">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <span class="explain detial_head_active">商品信息</span>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <span class="explain">享用说明</span>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <span class="explain">常见问题</span>
+                </div>
+            </div>
+            <div class="goods_detial">
+                <a href="">
+                    <img src="__ROOT__/{$Ersion.bImage}" alt="">
+                </a>
+            </div>
+            <div class="use_detial">
+                <a href="">
+                    <img src="__ROOT__/Index/Common/images/8d4f27e4b307a3dc9bcc00bc93.jpg" alt="">
+                </a>
+            </div>
+            <div class="question_detial" style="display:none">
+                <div class="p_wrap">
+                    <p>关于品质</p>
+                    <p>Z级：设备仍在品牌官方保修期内（至少30天及以上）。</p>
+                    <p>A级：ZEALER S 提供设备质保，经检测设备无主板维修。</p>
+                    <p>B级：ZEALER S 提供设备质保，可能存在主板修复历史。（主板核心芯片包括CPU、硬盘、内存、基带系统）</p>
+                </div>
+                <div class="p_wrap">
+                    <p>关于成色</p>
+                    <p>00：全新仅拆封，未被日常使用。</p>
+                    <p>99：有轻微使用痕迹或细微划痕，无明显外力磕碰。</p>
+                    <p>95：有轻微外观磕碰或屏幕划痕（贴膜可缓解）。</p>
+                    <p>90：有五处以内的明显外观磕碰或影响屏幕显示观感的划痕。</p>
+                </div>
+                <div class="p_wrap">
+                    <p>其他常见问题</p>
+                    <p>1. 二手设备是否附送相关配件？</p>
+                    <p>您下单购买的二手设备默认将不包含充电头、数据线、耳机等官方配件（卡针除外），您可以根据自己的实际情况选择其他配件商品。</p>
+                    <p>2. 二手设备是否可以去官方质保？</p>
+                    <p>Z 级品质均在品牌官方质保期内，可以去官方质保。除 Z 级品质设备外，在 ZEALER S 所售卖的其他品质二手手机均经过拆机检测，手机内部都会标贴 ZEALER丨FIX 的保修贴，这在手机官方保修中属于私拆范围，已经失去品牌官保资格，因此不再享有官方保修的条件。</p>
+                    <p>所有在 ZEALER S 购买的二手手机的用户均享有由 ZEALER丨FIX 提供的保修服务，您的权益将得到保障。</p>
+                    <p>3. 二手设备的地区版本说明。</p>
+                    <p>目前 ZEALER S 销售的二手设备将以国行、港版、日韩、其他四个维度作为版本区分，由于二手设备保修由 ZEALER丨FIX服务，您只需要确定您需要的网络制式即可。</p>
+                    <p>4. 二手设备内是否还有以前机主的相关资料？</p>
+                    <p>不会，在质检过程中原手机的相关资料将会被彻底抹除并彻底还原到出厂设置，您购买到设备后，可以随意注册和登录 iCloud 账户及导入您的个人数据。</p>
+                    <p>5. 二手设备电池容量说明。</p>
+                    <p>我们会对设备电池的健康程度进行检测，由于影响电池剩余容量的因素很多，我们仅确保电池剩余容量不低于出厂额定容量的80%。</p>
+                    <p>
+                        6. 二手设备是否有更换过零件？</p>
+                    <p>每部二手手机（除Z级外）在售前都会经过 ZEALER丨FIX 的工程师拆机详细检测，若发现问题，将对问题部件进行维修更换。主板级别的修复将影响设备的品质等级，以保障大家的知情权。</p>
+                    <p>7. 二手设备成色定义方式</p>
+                    <p>ZEALER S 根据两年的运营数据和用户反馈，启用独创的品质+成色二维评值系统，我们也将通过后期的运营数据不断的完善评值系统。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <include file="Public:index_footer"/>
+</body>
+<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module("myapp",[]);
+	app.controller("mycontroller",function($scope,$http){
+		$scope.list=[];
+		$scope.price="";
+		$scope.volumn="";
+		$scope.color="";
+		$scope.network="";
+		$scope.quality="";
+		$scope.version="";
+		$scope.sImage="";
+		$scope.id="";
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        prevButton: '.swiper-button-prev',
+	        nextButton: '.swiper-button-next',
+	        slidesPerView: 1,
+	        slidesPerGroup: 1,
+	        paginationClickable: true,
+	        width: 210,
+	        // spaceBetween: 20,
+	        centeredSlides: true,
+	        spaceBetween: 30
+	    });
+	
+	    $('.choose_item_box').hover(
+	        function () {
+	            $('.item_droped', this).css('display', 'block')
+	        },
+	        function () {
+	            $('.item_droped', this).css('display', 'none')
+	        }
+	    )
+	    $('.explain').click(
+	        function () {
+	            $(this).parent('div').siblings('div').children().removeClass('detial_head_active');
+	            $(this).addClass('detial_head_active')
+	        },
+	    );
+	    $('.detial_head div:nth-child(1) span').click(
+	        function () {
+	            $('.goods_detial').css('display', 'block');
+	            $('.use_detial').css('display', 'none');
+	            $('.question_detial').css('display', 'none');
+	        })
+	    $('.detial_head div:nth-child(2) span').click(
+	        function () {
+	            $('.goods_detial').css('display', 'none');
+	            $('.use_detial').css('display', 'block');
+	            $('.question_detial').css('display', 'none');
+	        })
+	    $('.detial_head div:nth-child(3) span').click(
+	        function () {
+	            $('.goods_detial').css('display', 'none');
+	            $('.use_detial').css('display', 'none');
+	            $('.question_detial').css('display', 'block');
+	        })
+	
+	    $('.item_droped li').on("click",function () {
+	    	 	//点击颜色获取所有的数据
+	    	 	var Html=$(this).html();
+	    	 	console.log(Html);
+			  $.ajax({
+	                type: "post",
+	                url: "__APP__/Rephone/dianDetail",
+	                data: {Html:Html},
+	                async: true,
+	                dataType: "json",
+	                success: function (data) {
+//	                		console.log(data);
+						$scope.$apply(function(){
+							$scope.list=data.data;
+						})
+	                }
+	           })
+	       $(".goods_slide").css("display","block");
+	    })
+	
+		$scope.dian=function(value){
+			$scope.id=value.id;
+			$scope.version=$(".show_wrap span:eq(0)").html();
+			$scope.price=$(".show_wrap span:eq(1)").html();
+			$scope.color=$(".show_wrap span:eq(2)").html();
+			$scope.volumn=$(".show_wrap span:eq(3)").html();		
+			$scope.network=$(".show_wrap span:eq(4)").html();
+			$scope.quality=$(".show_wrap span:eq(5)").html();
+			$scope.sImage=$(".show_wrap img")[0].src;
+			$('.det_inner').css('display', 'block');
+	        $('.choose_tab_wrap').css('display', 'none');	
+		}
+		
+	    $('.close_btn').click(function () {
+	        $('.det_inner').css('display', 'none');
+	        $('.choose_tab_wrap').css('display', 'block');
+	    })
+	    $(".add_cart").on("click",function(){
+	    		$.ajax({
+	    			url:"__APP__/Rephone/shopping",
+	    			type:"post",
+	    			dataType:"json",
+	    			data:{
+	    				id:$scope.id,
+	    			},
+	    			success:function(data){
+//	    				console.log(data);
+					if(data.status==1){
+						window.location.href="__APP__/Shopping/index?id="+$scope.id;
+					}else{
+						var mymessage=confirm("请登录");  
+						    if (mymessage==true) {  
+						        window.location.href="__APP__/Login/login";  
+						    } else if(mymessage==false) {  
+						       var mymessage_1=confirm("不要取消嘛，再确定一次呗");
+						       if(mymessage_1==true){
+						       	 window.location.href="__APP__/Login/login"; 
+						       }else{
+						       	alert("你真的好狠心");
+						       }
+						    } 
+					}
+	    				
+	    			}
+	    		})
+	    })
+	   		    		    
+	})	 	    			
+   
+
+</script>
+
+</html>

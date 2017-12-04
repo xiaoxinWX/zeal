@@ -1,0 +1,73 @@
+<!--头部的top-->
+<div class="index_header_top_box">
+    <!--里面的top-->
+    <div class="index_header_top">
+        <a href="__APP__/Index/index" class="header_logo"></a>
+        <!--4个有hover效果的a标签-->
+        <div class="index_header_wrap">
+            <div class="index_header_mall">
+                <a href="">享用商城</a>
+                <span class="index_header_icon">|</span>
+                <div class="index_header_hover">
+                    <a href="__APP__/Rephone/index">
+                        <p class="index_header_store">STORE</p>
+                        <p class="index_header_regale">享用商城</p>
+                    </a>
+                </div>
+            </div>
+            <div class="index_header_mall">
+                <a href="">手机维修</a>
+                <span class="index_header_icon">|</span>
+                <div class="index_header_hover index_header_fix">
+                    <a href="__APP__/Weixiu/index">
+                        <p class="index_header_store">FIX</p>
+                        <p class="index_header_regale">手机维修</p>
+                    </a>
+                </div>
+            </div>
+            <div class="index_header_mall">
+                <a href="">媒体科技</a>
+                <span class="index_header_icon">|</span>
+                <div class="index_header_hover index_header_media">
+                    <a href="http://www.zealer.com">
+                        <p class="index_header_store">MEDIA</p>
+                        <p class="index_header_regale">媒体科技</p>
+                    </a>
+                </div>
+            </div>
+            <div class="index_header_mall">
+                <a href="">客户服务</a>
+                <div class="index_header_hover index_header_service">
+                    <a href="__APP__/Service/index">
+                        <p class="index_header_store">SERVICE</p>
+                        <p class="index_header_regale">客户服务</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cart_wrap">
+            <a class="index_header_login" ng-show="{$judge}"  href="__APP__/Login/login">登陆</a>
+            <a class="index_header_login index_header_register" ng-show="{$judge}"  href="__APP__/Register/register">注册</a>
+            <a class="index_header_img1" ng-show="{$judge1}" href="__APP__/Shopping/index"></a> 
+            <span class="personal_wrap">
+                <a class="index_header_img2" ng-show="{$judge1}" ng-cloak href="javascript:;"></a>
+            <ul class="personal_list">
+                <li><a href="__APP__/Dizhi/panduan">个人中心</a></li>
+                <li><a href="__APP__/Service/index">客户服务</a></li>
+                <li><a href="__APP__/Login/loginout?op=logout">退出登录</a></li>
+            </ul>
+            </span>        
+            
+        </div>
+                       
+
+    </div>
+</div>
+<script type="text/javascript">
+    $('.personal_wrap').hover(
+        function(){
+            $('.personal_list', this).css('display','block');
+        },function(){
+            $('.personal_list', this).css('display','none');
+    })
+</script>
